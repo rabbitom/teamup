@@ -22,7 +22,7 @@ Page({
       {
         name: "Donald",
         avatar: "http://sc.admin5.com/uploads/allimg/100210/113629E45-2.png",
-        skills: ["ui/ux"],
+        skills: ["UI/UX"],
         ideas: ["02"],
         introduction: "I'm a designer. I can help if someone need UI/UX designing. And I do have an idea about building an app for people to chat about their hobbies. Feel free to message me if you are intrested."
       },

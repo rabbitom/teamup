@@ -1,9 +1,10 @@
 /* community.wxss */
 .user-card {
-  width: 90%;
   height: 300rpx;
-  margin: 30rpx 5% 0rpx 5%;
-  outline: #03DD7E solid 5rpx;
+  margin: 30rpx 30rpx 0 30rpx;
+  border-style: solid;
+  border-width: 5rpx;
+  border-color: #03DD7E;
   padding-left: 16rpx;
   padding-top: 16rpx;
 }
