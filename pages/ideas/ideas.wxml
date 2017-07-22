@@ -1,15 +1,15 @@
 <!--ideas.wxml-->
 <scroll-view>
-  <view class="common-card idea-card" wx:for="{{ideas}}" wx:for-item="idea" bindtap="onClickIdea">
+  <view class="common-card idea-card {{(selectedIndex == index) ? 'common-card-selected' : ''}}" wx:for="{{ideas}}" wx:for-item="idea" data-index="{{index}}" bindtap="onClickIdea" bindtouchstart="onTouchStart" bindtouchcancel="onTouchStop" bindtouchend="onTouchStop">
     <view class="idea-title-member">
-      <text class="idea-title">{{idea.title}}</text>
+      <text class="idea-title {{(selectedIndex == index) ? 'card-text-selected' : ''}}">{{idea.title}}</text>
       <view>
         <image class="common-small-icon" src="../../images/ios-people.png"></image>
         <text class="idea-member-count">{{idea.memberCount}}</text>
       </view>
     </view>
     <view class="skill-list">
-      Need:
+      <text class="skill-need {{(selectedIndex == index) ? 'card-text-selected' : ''}}">Need:</text>
       <text class="skill-item" wx:for="{{idea.skills}}">{{item}}</text>
     </view>
     <text class="brief-introduction">{{idea.introduction}}</text>

@@ -9,6 +9,14 @@
   padding-right: 16rpx;
 }
 
+.common-card-selected {
+  background-color: black;
+}
+
+.card-text-selected {
+  color: white;
+}
+
 .common-small-icon {
   width: 1rem;
   height: 1rem;

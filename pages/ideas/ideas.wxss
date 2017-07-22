@@ -26,8 +26,8 @@
   margin-top: 15rpx;
 }
 
-.skill-item:first-child {
-  margin-left: 15rpx;
+.skill-need {
+  margin-right: 15rpx;
 }
 
 .brief-introduction {

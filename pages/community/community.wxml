@@ -1,11 +1,11 @@
 <!--community.wxml-->
 <scroll-view>
-  <view class="common-card" wx:for="{{people}}" bindtap="onClickPerson">
+  <view class="common-card {{(selectedIndex == index) ? 'common-card-selected' : ''}}" wx:for="{{people}}" data-index="{{index}}" bindtap="onClickPerson" bindtouchstart="onTouchStart" bindtouchcancel="onTouchStop" bindtouchend="onTouchStop">
     <view class="user-avatar-name-skills">
       <image class="user-avatar" src="{{item.avatar}}"></image>
       <view class="user-name-skills">
         <view class="user-name-idea">
-          <text class="user-name">{{item.name}}</text>
+          <text class="user-name {{(selectedIndex == index) ? 'card-text-selected' : ''}}">{{item.name}}</text>
           <image class="common-small-icon" wx:if="{{item.ideas && (item.ideas.length > 0)}}" src="../../images/ios-lightbulb-outline_colored.png"></image>
         </view>
         <view class="skill-list">

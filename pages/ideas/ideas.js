@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectedIndex: -1,
     ideas: [
       {
         title: "Chat app about hobbies",
@@ -31,6 +32,16 @@ Page({
     wx.showActionSheet({
       itemList: ["Join the team"],
     })
+  },
+
+  onTouchStart: function (event) {
+    var index = event.currentTarget.dataset.index;
+    if (index !== undefined)
+      this.setData({ selectedIndex: index });
+  },
+
+  onTouchStop: function (event) {
+    this.setData({ selectedIndex: -1 });
   },
 
   /**
