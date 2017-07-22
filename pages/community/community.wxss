@@ -1,1 +1,62 @@
 /* community.wxss */
+.user-card {
+  width: 90%;
+  height: 300rpx;
+  margin: 30rpx 5% 0rpx 5%;
+  outline: #03DD7E solid 5rpx;
+  padding-left: 16rpx;
+  padding-top: 16rpx;
+}
+
+.user-avatar-name-skills {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.user-name-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-left: 16rpx;
+}
+
+.user-name-idea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-idea-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.user-skills {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-skill {
+  border-radius: 15rpx;
+  border-style: solid;
+  border-width: 3rpx;
+  border-color: #03DD7E;
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  margin-right: 10rpx;
+  color: #03DD7E;
+}
+
+.user-introduction {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

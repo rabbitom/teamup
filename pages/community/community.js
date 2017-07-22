@@ -5,7 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    people: [
+      {
+        name: "Tom",
+        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rX2Oiaqib2QGM5jBCLNUJLribFl6gp6LSqQN2IGTd8dPViaH5gicYUNINhbqicNLnSnSeZVrV8yFq50nkKUQ0bWYJFIw/0",
+        skills: ["iOS", "Android", "AWS"],
+        ideas: ["01"],
+        introduction: "I'm a developer focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+      },
+      {
+        name: "Jerry",
+        avatar: "http://up.qqjia.com/z/face01/face06/facejunyong/junyong27.jpg",
+        skills: ["Node.js", "Angular"],
+        introduction: "I'm a JavaScript full-stack engineer. I do backend and frontend at same time. Looking for something cool to build!"
+      },
+      {
+        name: "Donald",
+        avatar: "http://sc.admin5.com/uploads/allimg/100210/113629E45-2.png",
+        skills: ["ui/ux"],
+        ideas: ["02"],
+        introduction: "I'm a designer. I can help if someone need UI/UX designing. And I do have an idea about building an app for people to chat about their hobbies. Feel free to message me if you are intrested."
+      },
+      {
+        name: "Jack",
+        avatar: "http://up.qqjia.com/z/face01/face06/facejunyong/junyong02.jpg",
+        skills: ["Python", "AI"],
+        introduction: "I'm a developer, focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+      }
+    ]
   },
 
   /**

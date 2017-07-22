@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/ideas/ideas",
     "pages/community/community",
-    "pages/me/me"
+    "pages/ideas/ideas",
+    "pages/me/me",
+    "pages/index/index",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,7 +17,7 @@
     "selectedColor": "#03DD7E",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/community/community",
         "text": "Community",
         "iconPath": "images/ios-people-outline.png",
         "selectedIconPath": "images/ios-people.png"
