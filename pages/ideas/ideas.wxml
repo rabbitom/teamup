@@ -1,6 +1,6 @@
 <!--ideas.wxml-->
 <scroll-view>
-  <view class="common-card idea-card" wx:for="{{ideas}}" wx:for-item="idea">
+  <view class="common-card idea-card" wx:for="{{ideas}}" wx:for-item="idea" bindtap="onClickIdea">
     <view class="idea-title-member">
       <text class="idea-title">{{idea.title}}</text>
       <view>

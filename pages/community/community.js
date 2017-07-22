@@ -35,6 +35,12 @@ Page({
     ]
   },
 
+  onClickPerson: function(event) {
+    wx.showActionSheet({
+      itemList: ["Send Invitation"],
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

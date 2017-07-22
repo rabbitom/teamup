@@ -27,6 +27,12 @@ Page({
     ]
   },
 
+  onClickIdea: function(event) {
+    wx.showActionSheet({
+      itemList: ["Join the team"],
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

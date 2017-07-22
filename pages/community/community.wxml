@@ -1,6 +1,6 @@
 <!--community.wxml-->
 <scroll-view>
-  <view class="common-card" wx:for="{{people}}">
+  <view class="common-card" wx:for="{{people}}" bindtap="onClickPerson">
     <view class="user-avatar-name-skills">
       <image class="user-avatar" src="{{item.avatar}}"></image>
       <view class="user-name-skills">
