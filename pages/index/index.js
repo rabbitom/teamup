@@ -3,11 +3,11 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello Wechat',
+    motto: 'Make your team in community',
     userInfo: {}
   },
   //事件处理函数
-  bindViewTap: function() {
+  getStarted: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
