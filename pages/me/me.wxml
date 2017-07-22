@@ -13,15 +13,15 @@
       <image class="avatar" src="{{user.avatar}}" background-size="cover"></image>
       <text class="me-name">{{user.name}}</text>
     </view>
-    <template is="divider" data="{{...skillsTitle}}"/>
-    <view class="skill-list">
-      <text class="skill-item" wx:for="{{user.skills}}">{{item}}</text>
-      <text class="skill-item">+</text>
-    </view>
     <template is="divider" data="{{...introductionTitle}}"/>
     <view class="introduction-edit">
       <textarea class="introduction-text" placeholder="Please let others know what you can do and how they can help you." />
       <icon class="edit-clear" type="clear" size="25"/>
+    </view>
+    <template is="divider" data="{{...skillsTitle}}"/>
+    <view class="skill-list">
+      <text class="skill-item" wx:for="{{user.skills}}">{{item}}</text>
+      <text class="skill-item">+</text>
     </view>
     <template is="divider" data="{{...ideasTitle}}"/>
     <view class="me-idea-edit">
