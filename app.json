@@ -1,12 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/ideas/ideas",
+    "pages/community/community",
+    "pages/me/me"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#03DD7E",
     "navigationBarTitleText": "TeamUp",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#03DD7E",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Community",
+        "iconPath": "images/ios-people-outline.png",
+        "selectedIconPath": "images/ios-people.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "Ideas",
+        "iconPath": "images/ios-lightbulb-outline.png",
+        "selectedIconPath": "images/ios-lightbulb.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "Me",
+        "iconPath": "images/ios-person-outline.png",
+        "selectedIconPath": "images/ios-person.png"
+      }
+    ]
   }
 }
