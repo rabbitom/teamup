@@ -1,18 +1,90 @@
 /* me.wxss */
-.userinfo {
+@import "../common.wxss";
+
+.me-container {
+  width: 100%;
+}
+
+.me-avatar-name {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.me-name {
+  margin-top: 20rpx;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #AAA;
+}
+
+.divider-line {
+  height: 2rpx;
+  flex: 1;
+  background-color: #AAA;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.skill-list {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.introduction-edit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-text {
+  border-style: solid;
+  border-width: 2rpx;
+  border-color: #AAA;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.edit-clear {
+  margin-left: 10rpx;
+}
+
+.me-idea-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+  border-style: solid;
+  border-width: 2rpx;
+  border-color: #AAA;
+  border-radius: 20rpx;
+}
+
+.me-idea-title {
+  color: #AAA;
+  margin-left: 20rpx;
+}
+
+.me-idea-edit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
 }

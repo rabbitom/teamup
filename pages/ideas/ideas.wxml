@@ -4,7 +4,7 @@
     <view class="idea-title-member">
       <text class="idea-title">{{idea.title}}</text>
       <view>
-        <image class="idea-community-icon" src="../../images/ios-people.png"></image>
+        <image class="common-small-icon" src="../../images/ios-people.png"></image>
         <text class="idea-member-count">{{idea.memberCount}}</text>
       </view>
     </view>

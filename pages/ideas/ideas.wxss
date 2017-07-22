@@ -17,11 +17,6 @@
   font-size: 40rpx;
 }
 
-.idea-community-icon {
-  width: 1rem;
-  height: 1rem;
-}
-
 .idea-member-count {
   color: #03DD7E;
   margin-left: 5rpx;

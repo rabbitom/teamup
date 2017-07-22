@@ -3,7 +3,26 @@
 var app = getApp()
 Page({
   data: {
-    userInfo: {}
+    userInfo: {},
+    user: {
+      name: "Tom",
+      avatar: "https://wx.qlogo.cn/mmopen/vi_32/rX2Oiaqib2QGM5jBCLNUJLribFl6gp6LSqQN2IGTd8dPViaH5gicYUNINhbqicNLnSnSeZVrV8yFq50nkKUQ0bWYJFIw/0",
+      skills: ["iOS", "Android", "AWS"],
+      ideas: [{
+        id: "1",
+        title: "IoT Sensor Platform"
+      }],
+      introduction: "I'm a developer focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+    },
+    skillsTitle: {
+      title: "My Skills"
+    },
+    introductionTitle: {
+      title: "Self Introduction"
+    },
+    ideasTitle: {
+      title: "My Ideas"
+    }
   },
   // //事件处理函数
   // getStarted: function () {

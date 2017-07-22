@@ -6,7 +6,7 @@
       <view class="user-name-skills">
         <view class="user-name-idea">
           <text class="user-name">{{item.name}}</text>
-          <image class="user-idea-icon" wx:if="{{item.ideas && (item.ideas.length > 0)}}" src="../../images/ios-lightbulb-outline_colored.png"></image>
+          <image class="common-small-icon" wx:if="{{item.ideas && (item.ideas.length > 0)}}" src="../../images/ios-lightbulb-outline_colored.png"></image>
         </view>
         <view class="skill-list">
           <text class="skill-item" wx:for="{{item.skills}}">{{item}}</text>

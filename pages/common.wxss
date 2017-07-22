@@ -9,6 +9,17 @@
   padding-right: 16rpx;
 }
 
+.common-small-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
 .brief-introduction {
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -31,4 +42,13 @@
   padding: 5rpx 10rpx 5rpx 10rpx;
   margin-right: 10rpx;
   color: #03DD7E;
+}
+
+.main-button {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  color: #03DD7E;
+  border:1px solid #03DD7E;
+  background-color:transparent;
 }

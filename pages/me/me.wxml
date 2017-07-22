@@ -1,7 +1,36 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<template name="divider">
+  <view class="divider">
+    <view class="divider-line"/>
+    <text>{{title}}</text>
+    <view class="divider-line"/>
   </view>
-</view>
+</template>
+
+<scroll-view>
+  <view class="me-container">
+    <view class="me-avatar-name">
+      <image class="avatar" src="{{user.avatar}}" background-size="cover"></image>
+      <text class="me-name">{{user.name}}</text>
+    </view>
+    <template is="divider" data="{{...skillsTitle}}"/>
+    <view class="skill-list">
+      <text class="skill-item" wx:for="{{user.skills}}">{{item}}</text>
+      <text class="skill-item">+</text>
+    </view>
+    <template is="divider" data="{{...introductionTitle}}"/>
+    <view class="introduction-edit">
+      <textarea class="introduction-text" placeholder="Please let others know what you can do and how they can help you." />
+      <icon class="edit-clear" type="clear" size="25"/>
+    </view>
+    <template is="divider" data="{{...ideasTitle}}"/>
+    <view class="me-idea-edit">
+      <view class="me-idea-item" wx:for="{{user.ideas}}" wx:for-item="idea">
+        <image class="common-small-icon" src="../../images/ios-lightbulb-outline.png"/>
+        <text class="me-idea-title">{{idea.title}}</text>
+      </view>
+      <icon class="edit-clear" type="clear" size="25"/>
+    </view>
+    <button class="main-button">New idea</button>
+  </view>
+</scroll-view>
