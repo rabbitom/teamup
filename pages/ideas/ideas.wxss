@@ -1,1 +1,40 @@
 /* ideas.wxss */
+@import "../common.wxss";
+
+.idea-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-title-member {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.idea-title {
+  font-size: 40rpx;
+}
+
+.idea-community-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.idea-member-count {
+  color: #03DD7E;
+  margin-left: 5rpx;
+}
+
+.skill-list {
+  margin-top: 15rpx;
+}
+
+.skill-item:first-child {
+  margin-left: 15rpx;
+}
+
+.brief-introduction {
+  margin-top: 15rpx;
+}

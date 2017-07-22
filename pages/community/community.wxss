@@ -1,13 +1,5 @@
 /* community.wxss */
-.user-card {
-  height: 300rpx;
-  margin: 30rpx 30rpx 0 30rpx;
-  border-style: solid;
-  border-width: 5rpx;
-  border-color: #03DD7E;
-  padding-left: 16rpx;
-  padding-top: 16rpx;
-}
+@import "../common.wxss";
 
 .user-avatar-name-skills {
   display: flex;
@@ -38,26 +30,4 @@
 .user-idea-icon {
   width: 1rem;
   height: 1rem;
-}
-
-.user-skills {
-  display: flex;
-  flex-direction: row;
-}
-
-.user-skill {
-  border-radius: 15rpx;
-  border-style: solid;
-  border-width: 3rpx;
-  border-color: #03DD7E;
-  padding: 5rpx 10rpx 5rpx 10rpx;
-  margin-right: 10rpx;
-  color: #03DD7E;
-}
-
-.user-introduction {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }

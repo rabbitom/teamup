@@ -1,6 +1,6 @@
 <!--community.wxml-->
 <scroll-view>
-  <view class="user-card" wx:for="{{people}}">
+  <view class="common-card" wx:for="{{people}}">
     <view class="user-avatar-name-skills">
       <image class="user-avatar" src="{{item.avatar}}"></image>
       <view class="user-name-skills">
@@ -8,11 +8,11 @@
           <text class="user-name">{{item.name}}</text>
           <image class="user-idea-icon" wx:if="{{item.ideas && (item.ideas.length > 0)}}" src="../../images/ios-lightbulb-outline_colored.png"></image>
         </view>
-        <view class="user-skills">
-          <text class="user-skill" wx:for="{{item.skills}}">{{item}}</text>
+        <view class="skill-list">
+          <text class="skill-item" wx:for="{{item.skills}}">{{item}}</text>
         </view>
       </view>
     </view>
-    <text class="user-introduction">{{item.introduction}}</text>
+    <text class="brief-introduction">{{item.introduction}}</text>
   </view>
 </scroll-view>

@@ -1,2 +1,17 @@
 <!--ideas.wxml-->
-<text>ideas.wxml</text>
+<scroll-view>
+  <view class="common-card idea-card" wx:for="{{ideas}}" wx:for-item="idea">
+    <view class="idea-title-member">
+      <text class="idea-title">{{idea.title}}</text>
+      <view>
+        <image class="idea-community-icon" src="../../images/ios-people.png"></image>
+        <text class="idea-member-count">{{idea.memberCount}}</text>
+      </view>
+    </view>
+    <view class="skill-list">
+      Need:
+      <text class="skill-item" wx:for="{{idea.skills}}">{{item}}</text>
+    </view>
+    <text class="brief-introduction">{{idea.introduction}}</text>
+  </view>
+</scroll-view>

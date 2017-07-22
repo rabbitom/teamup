@@ -23,7 +23,7 @@
         "selectedIconPath": "images/ios-people.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/ideas/ideas",
         "text": "Ideas",
         "iconPath": "images/ios-lightbulb-outline.png",
         "selectedIconPath": "images/ios-lightbulb.png"
