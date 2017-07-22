@@ -44,14 +44,14 @@
   margin-right: 20rpx;
 }
 
-.introduction-edit {
+.edit {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.introduction-text {
+.edit-content {
   border-style: solid;
   border-width: 2rpx;
   border-color: #AAA;
@@ -63,28 +63,22 @@
   margin-left: 10rpx;
 }
 
-.me-idea-item {
+.me-idea-content {
+  width: 80%;
+}
+
+.me-idea-content-field {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 20rpx;
-  border-style: solid;
-  border-width: 2rpx;
-  border-color: #AAA;
-  border-radius: 20rpx;
+  margin-bottom: 20rpx;
 }
 
-.me-idea-title {
-  color: #AAA;
+.me-idea-content-text {
+  color: #888;
   margin-left: 20rpx;
 }
 
-.me-idea-edit {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
+.me-idea {
   margin-bottom: 20rpx;
 }

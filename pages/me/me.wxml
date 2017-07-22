@@ -14,8 +14,8 @@
       <text class="me-name">{{user.name}}</text>
     </view>
     <template is="divider" data="{{...introductionTitle}}"/>
-    <view class="introduction-edit">
-      <textarea class="introduction-text" placeholder="Please let others know what you can do and how they can help you." />
+    <view class="edit">
+      <textarea class="edit-content" placeholder="Please let others know what you can do and how they can help you." />
       <icon class="edit-clear" type="clear" size="25"/>
     </view>
     <template is="divider" data="{{...skillsTitle}}"/>
@@ -24,10 +24,23 @@
       <text class="skill-item">+</text>
     </view>
     <template is="divider" data="{{...ideasTitle}}"/>
-    <view class="me-idea-edit">
-      <view class="me-idea-item" wx:for="{{user.ideas}}" wx:for-item="idea">
-        <image class="common-small-icon" src="../../images/ios-lightbulb-outline.png"/>
-        <text class="me-idea-title">{{idea.title}}</text>
+    <view class="me-idea edit"  wx:for="{{user.ideas}}" wx:for-item="idea">
+      <view class="me-idea-content edit-content">
+        <view class="me-idea-content-field">
+          <image class="common-small-icon" src="../../images/ios-lightbulb-outline_colored.png"/>
+          <input type="text" value="{{idea.title}}" class="me-idea-content-text"></input>
+        </view>
+        <view class="me-idea-content-field">
+          <image class="common-small-icon" src="../../images/ios-people-outline_colored.png"/>
+          <view class="skill-list">
+            <text class="skill-item" wx:for="{{idea.skills}}">{{item}}</text>
+            <text class="skill-item">+</text>
+          </view>
+        </view>
+        <view class="me-idea-content-field">
+          <image class="common-small-icon" src="../../images/ios-compose-outline_colored.png"/>
+          <textarea class="me-idea-content-text">{{idea.introduction}}</textarea>
+        </view>
       </view>
       <icon class="edit-clear" type="clear" size="25"/>
     </view>

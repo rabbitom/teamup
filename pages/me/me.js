@@ -10,7 +10,9 @@ Page({
       skills: ["iOS", "Android", "AWS"],
       ideas: [{
         id: "1",
-        title: "IoT Sensor Platform"
+        title: "IoT Sensor Platform",
+        skills: ["UI", "Cloud"],
+        introduction: "Build an platform to gather data from massive IoT sensors around the world. The key to this is a highly scalable cloud infrastructure."
       }],
       introduction: "I'm a developer focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
     },
