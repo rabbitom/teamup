@@ -10,33 +10,33 @@ Page({
     people: [
       {
         show: true,
-        name: "Tom",
-        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rX2Oiaqib2QGM5jBCLNUJLribFl6gp6LSqQN2IGTd8dPViaH5gicYUNINhbqicNLnSnSeZVrV8yFq50nkKUQ0bWYJFIw/0",
-        skills: ["iOS", "Android", "AWS"],
+        name: "Richard",
+        avatar: "../../images/richard.jpg",
+        skills: ["Ruby", "AWS"],
         ideas: ["01"],
-        introduction: "I'm a developer focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+        introduction: "I leanred ruby in a weekend. I'm founder of PiedPiper. I invented the most advanced compression algorithm Middle-out."
       },
       {
         show: true,
-        name: "Jerry",
-        avatar: "http://up.qqjia.com/z/face01/face06/facejunyong/junyong27.jpg",
+        name: "Jared",
+        avatar: "../../images/jared.jpg",
         skills: ["Node.js", "Angular"],
+        ideas: ["02"],
         introduction: "I'm a JavaScript full-stack engineer. I do backend and frontend at same time. Looking for something cool to build!"
       },
       {
         show: true,
-        name: "Donald",
-        avatar: "http://sc.admin5.com/uploads/allimg/100210/113629E45-2.png",
-        skills: ["UI/UX"],
-        ideas: ["02"],
-        introduction: "I'm a designer. I can help if someone need UI/UX designing. And I do have an idea about building an app for people to chat about their hobbies. Feel free to message me if you are intrested."
+        name: "Gilfoyle",
+        avatar: "../../images/gilfoyle.jpg",
+        skills: ["FullStack", "Architect"],
+        introduction: "I'm a full statck engineerer and a senior system architect. I set up a GPU based server farm in garage. I have a lot of expierence dealing with network attacks."
       },
       {
         show: true,
-        name: "Jack",
-        avatar: "http://up.qqjia.com/z/face01/face06/facejunyong/junyong02.jpg",
-        skills: ["Python", "AI"],
-        introduction: "I'm a developer, focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+        name: "Dinesh",
+        avatar: "../../images/dinesh.jpg",
+        skills: ["UI/UX", "iOS", "Java"],
+        introduction: "I can code fluently in Java. I love brilliant code. I made a game-changing video chat app called Piper Chat. I did great frontend design for the famous 'Not Hotdog' App. "
       }
     ]
   },

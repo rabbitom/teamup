@@ -9,6 +9,20 @@ Page({
     ideas: [
       {
         show: true,
+        title: "A new internet",
+        memberCount: 3,
+        skills: ["C/C++"],
+        introduction: "I'm building a completely decentralized internet. No monitor, no control, information will flow freely."
+      },
+      {
+        show: true,
+        title: "The box",
+        memberCount: 1,
+        skills: ["UX"],
+        introduction: "The best data storage appliance ever made. Now need the help of a UX engineer to make life easier for our customers."
+      },
+      {
+        show: true,
         title: "Chat app about hobbies",
         memberCount: 5,
         skills: ["iOS", "Android", "Backend"],
