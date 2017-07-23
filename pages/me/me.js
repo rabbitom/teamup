@@ -3,11 +3,13 @@
 var app = getApp()
 Page({
   data: {
+    showSkillInput: false,
+    skillInputValue: '',
     userInfo: {},
     user: {
       name: "Tom",
       avatar: "https://wx.qlogo.cn/mmopen/vi_32/rX2Oiaqib2QGM5jBCLNUJLribFl6gp6LSqQN2IGTd8dPViaH5gicYUNINhbqicNLnSnSeZVrV8yFq50nkKUQ0bWYJFIw/0",
-      skills: ["iOS", "Android", "AWS"],
+      skills: [],
       ideas: [{
         id: "1",
         title: "IoT Sensor Platform",
@@ -26,12 +28,25 @@ Page({
       title: "My Ideas"
     }
   },
-  // //事件处理函数
-  // getStarted: function () {
-  //   // wx.navigateTo({
-  //   //   url: '../logs/logs'
-  //   // })
-  // },
+  addSkill: function () {
+    this.setData({showSkillInput: true});
+  },
+  onSkillInputDone: function(event) {
+    var newSkill = event.detail.value;
+    if((newSkill !== undefined) && (newSkill.length > 0)) {
+      var skills = this.data.user.skills;
+      if(skills.indexOf(newSkill) < 0) {
+        skills.push(newSkill);
+        this.setData({
+          user: this.data.user
+        });
+      }
+    }
+    this.setData({ showSkillInput: false, skillInputValue: "" });
+  },
+  onSkillInputCancel: function(event) {
+    this.setData({ showSkillInput: false, skillInputValue: "" });
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

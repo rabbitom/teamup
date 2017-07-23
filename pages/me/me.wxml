@@ -21,11 +21,15 @@
     <template is="divider" data="{{...skillsTitle}}"/>
     <view class="skill-list">
       <text class="skill-item" wx:for="{{user.skills}}">{{item}}</text>
-      <text class="skill-item">+</text>
+      <text class="skill-item" bindtap="addSkill">+</text>
+    </view>
+    <view class="edit" hidden="{{!showSkillInput}}">
+      <input class="edit-content" value="{{skillInputValue}}" bindconfirm="onSkillInputDone"/>
+      <icon class="edit-clear" type="clear" size="25" bindtap="onSkillInputCancel"/>
     </view>
     <template is="divider" data="{{...ideasTitle}}"/>
     <view class="me-idea edit"  wx:for="{{user.ideas}}" wx:for-item="idea">
-      <view class="me-idea-content edit-content">
+      <view class="edit-content">
         <view class="me-idea-content-field">
           <image class="common-small-icon" src="../../images/ios-lightbulb-outline_colored.png"/>
           <input type="text" value="{{idea.title}}" class="me-idea-content-text"></input>

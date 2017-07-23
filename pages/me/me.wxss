@@ -42,6 +42,7 @@
 .skill-list {
   margin-left: 20rpx;
   margin-right: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .edit {
@@ -57,14 +58,11 @@
   border-color: #AAA;
   border-radius: 20rpx;
   padding: 20rpx;
+  width: 80%;
 }
 
 .edit-clear {
   margin-left: 10rpx;
-}
-
-.me-idea-content {
-  width: 80%;
 }
 
 .me-idea-content-field {
