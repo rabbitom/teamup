@@ -33,3 +33,7 @@
 .brief-introduction {
   margin-top: 15rpx;
 }
+
+.edit {
+  margin-top: 20rpx;
+}

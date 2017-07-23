@@ -60,3 +60,23 @@
   border:1px solid #03DD7E;
   background-color:transparent;
 }
+
+.edit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-content {
+  border-style: solid;
+  border-width: 2rpx;
+  border-color: #AAA;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  width: 80%;
+}
+
+.edit-clear {
+  margin-left: 10rpx;
+}

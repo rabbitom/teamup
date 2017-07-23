@@ -1,6 +1,10 @@
 <!--ideas.wxml-->
+<view class="edit">
+  <input class="edit-content" value="{{filter}}" bindinput="onFilterChange"/>
+  <icon class="edit-clear" type="clear" size="25" bindtap="onFilterClear"/>
+</view>
 <scroll-view>
-  <view class="common-card idea-card {{(selectedIndex == index) ? 'common-card-selected' : ''}}" wx:for="{{ideas}}" wx:for-item="idea" data-index="{{index}}" bindtap="onClickIdea" bindtouchstart="onTouchStart" bindtouchcancel="onTouchStop" bindtouchend="onTouchStop">
+  <view class="common-card idea-card {{(selectedIndex == index) ? 'common-card-selected' : ''}}" wx:for="{{ideas}}" wx:for-item="idea" hidden="{{!idea.show}}" data-index="{{index}}" bindtap="onClickIdea" bindtouchstart="onTouchStart" bindtouchcancel="onTouchStop" bindtouchend="onTouchStop">
     <view class="idea-title-member">
       <text class="idea-title {{(selectedIndex == index) ? 'card-text-selected' : ''}}">{{idea.title}}</text>
       <view>
