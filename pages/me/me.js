@@ -10,13 +10,8 @@ Page({
       name: "Tom",
       avatar: "https://wx.qlogo.cn/mmopen/vi_32/rX2Oiaqib2QGM5jBCLNUJLribFl6gp6LSqQN2IGTd8dPViaH5gicYUNINhbqicNLnSnSeZVrV8yFq50nkKUQ0bWYJFIw/0",
       skills: [],
-      ideas: [{
-        id: "1",
-        title: "IoT Sensor Platform",
-        skills: ["UI", "Cloud"],
-        introduction: "Build an platform to gather data from massive IoT sensors around the world. The key to this is a highly scalable cloud infrastructure."
-      }],
-      introduction: "I'm a developer focusing on IoT applications. I'm intrested in cross-platform developing. My favorite programming languages are JavaScript and C#."
+      ideas: [],
+      introduction: ""
     },
     skillsTitle: {
       title: "My Skills"
@@ -27,6 +22,18 @@ Page({
     ideasTitle: {
       title: "My Ideas"
     }
+  },
+  onIntroductionInputDone: function(event) {
+    var newIntro = event.detail.value;
+    console.log("new intro: " + newIntro);
+    if(newIntro !== undefined) {
+      this.data.user.introduction = newIntro;
+      this.setData({user:this.data.user});
+    }
+  },
+  onClearIntroduction: function() {
+    this.data.user.introduction = "";
+    this.setData({user: this.data.user});
   },
   addSkill: function () {
     this.setData({showSkillInput: true});
@@ -46,6 +53,75 @@ Page({
   },
   onSkillInputCancel: function(event) {
     this.setData({ showSkillInput: false, skillInputValue: "" });
+  },
+  addNewIdea: function(event) {
+    var newIdea = {
+      id: "1",
+      title: "",
+      skills: [],
+      showSkillInput: false,
+      skillInputValue: "",
+      introduction: ""
+    };
+    this.data.user.ideas.push(newIdea);
+    this.setData({user:this.data.user});
+  },
+  onRemoveIdea: function(event) {
+    var index = event.target.dataset.index;
+    if(index !== undefined) {
+      this.data.user.ideas.splice(index,1);
+      this.setData({user: this.data.user});
+    }
+  },
+  onIdeaTitleInputDone: function(event) {
+    var index = event.target.dataset.index;
+    if (index !== undefined) {
+      var idea = this.data.user.ideas[index];
+      var newTitle = event.detail.value;
+      if ((newTitle !== undefined) && (newTitle.length > 0))
+        idea.title = newTitle;
+      this.setData({ user: this.data.user });
+    }
+  },
+  onAddSkillForIdea: function(event) {
+    var index = event.target.dataset.index;
+    if (index !== undefined) {
+      var idea = this.data.user.ideas[index];
+      idea.showSkillInput = true;
+      this.setData({user: this.data.user});
+    }
+  },
+  onIdeaSkillInputDone: function(event) {
+    var index = event.target.dataset.index;
+    if (index !== undefined) {
+      var idea = this.data.user.ideas[index];
+      var newSkill = event.detail.value;
+      if ((newSkill !== undefined) && (newSkill.length > 0)) {
+        if (idea.skills.indexOf(newSkill) < 0) {
+          idea.skills.push(newSkill);
+        }
+      }
+      idea.showSkillInput = false;
+      this.setData({ user: this.data.user });
+    }
+  },
+  onIdeaSkillInputCancel: function(event) {
+    var index = event.target.dataset.index;
+    if (index !== undefined) {
+      var idea = this.data.user.ideas[index];
+      idea.showSkillInput = false;
+      this.setData({ user: this.data.user });
+    }
+  },
+  onIdeaIntroductionInputDone: function(event) {
+    var index = event.target.dataset.index;
+    if (index !== undefined) {
+      var idea = this.data.user.ideas[index];
+      var newIntro = event.detail.value;
+      if ((newIntro !== undefined) && (newIntro.length > 0))
+        idea.introduction = newIntro;
+      this.setData({ user: this.data.user });
+    }
   },
   onLoad: function () {
     console.log('onLoad')

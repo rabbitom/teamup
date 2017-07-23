@@ -80,3 +80,11 @@
 .me-idea {
   margin-bottom: 20rpx;
 }
+
+.input-placeholder {
+  color: red;
+}
+
+.textarea-placeholder {
+  color: red;
+}

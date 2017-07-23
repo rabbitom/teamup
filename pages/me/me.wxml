@@ -15,8 +15,8 @@
     </view>
     <template is="divider" data="{{...introductionTitle}}"/>
     <view class="edit">
-      <textarea class="edit-content" placeholder="Please let others know what you can do and how they can help you." />
-      <icon class="edit-clear" type="clear" size="25"/>
+      <textarea class="edit-content" placeholder="What you can do to help others ( <= 140characters )." value="{{user.introduction}}" bindblur="onIntroductionInputDone"/>
+      <icon class="edit-clear" type="clear" size="25" bindtap="onClearIntroduction"/>
     </view>
     <template is="divider" data="{{...skillsTitle}}"/>
     <view class="skill-list">
@@ -32,22 +32,26 @@
       <view class="edit-content">
         <view class="me-idea-content-field">
           <image class="common-small-icon" src="../../images/ios-lightbulb-outline_colored.png"/>
-          <input type="text" value="{{idea.title}}" class="me-idea-content-text"></input>
+          <input type="text" value="{{idea.title}}" placeholder="Project name" class="me-idea-content-text" data-index="{{index}}" bindblur="onIdeaTitleInputDone"></input>
         </view>
         <view class="me-idea-content-field">
           <image class="common-small-icon" src="../../images/ios-people-outline_colored.png"/>
           <view class="skill-list">
             <text class="skill-item" wx:for="{{idea.skills}}">{{item}}</text>
-            <text class="skill-item">+</text>
+            <text class="skill-item" data-index="{{index}}" bindtap="onAddSkillForIdea">+</text>
           </view>
+        </view>
+        <view class="edit" hidden="{{!idea.showSkillInput}}">
+          <input class="edit-content" value="{{idea.skillInputValue}}" data-index="{{index}}" bindconfirm="onIdeaSkillInputDone"/>
+          <icon class="edit-clear" type="clear" size="25" data-index="{{index}}" bindtap="onIdeaSkillInputCancel"/>
         </view>
         <view class="me-idea-content-field">
           <image class="common-small-icon" src="../../images/ios-compose-outline_colored.png"/>
-          <textarea class="me-idea-content-text">{{idea.introduction}}</textarea>
+          <textarea class="me-idea-content-text" placeholder="Tell your story here." value="{{idea.introduction}}" data-index="{{index}}" bindblur="onIdeaIntroductionInputDone"/>
         </view>
       </view>
-      <icon class="edit-clear" type="clear" size="25"/>
+      <icon class="edit-clear" type="clear" size="25" data-index="{{index}}" bindtap="onRemoveIdea"/>
     </view>
-    <button class="main-button">New idea</button>
+    <button class="main-button" bindtap="addNewIdea">New idea</button>
   </view>
 </scroll-view>
